@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b0b12">
+    <title>GhostCut | Creator Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-layout">
+                                               
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">G</div>
+            <div>
+                <h2>GhostCut</h2>
+                <span>CREATOR STUDIO</span>
+            </div>
+        </div>
+
+        <div class="sidebar-label">WORKSPACE</div>
+
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="nav-link active">
+                <span>◈</span> Dashboard
+            </a>
+            <a href="#studio" class="nav-link">
+                <span>✎</span> Script Studio
+            </a>
+            <a href="#storyboard" class="nav-link">
+                <span>▤</span> Storyboard
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="sidebar-label">YOUR CREATIVE SPACE</div>
+            <div class="sidebar-tip">
+                <span>✦</span>
+                <p>Great videos begin with great hooks.</p>
+            </div>
+            <div class="sidebar-footer">
+                <span class="status-dot"></span>
+                GhostCut Workspace
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN WORKSPACE -->
+    <main class="main-workspace">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+            <div>
+                <span class="breadcrumb">Workspace / Overview</span>
+                <h1>Creator Dashboard</h1>
+            </div>
+
+            <div class="topbar-right">
+                <span class="system-status">
+                    <span class="status-dot"></span>
+                    System Online
+                </span>
+                <div class="avatar">GC</div>
+            </div>
+        </header>
+
+        <!-- DASHBOARD -->
+        <section class="dashboard-section" id="dashboard">
+
+            <div class="welcome-banner">
+                <div class="welcome-content">
+                    <span class="eyebrow">YOUR CREATIVE WORKSPACE</span>
+                    <h2>Turn your ideas into<br> <span>scroll-stopping stories.</span></h2>
+                    <p>Write smarter scripts, optimize your hooks and
+                       structure every second of your next video.</p>
+                    <a href="#studio" class="banner-link">Start creating <span>→</span></a>
+                </div>
+                <div class="welcome-art">
+                    <div class="art-circle">✦</div>
+                    <div class="art-orbit orbit-one"></div>
+                    <div class="art-orbit orbit-two"></div>
+                    <span class="art-text">CREATE<br>BETTER.</span>
+                </div>
+            </div>
+
+            <!-- STATISTICS -->
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">OVERVIEW</span>
+                    <h2>Your workspace</h2>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon purple">▤</div>
+                    <span class="stat-label">PROJECT WORKSPACE</span>
+                    <h3>Ready</h3>
+                    <p>Start your next project</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon blue">✎</div>
+                    <span class="stat-label">SCRIPT EDITOR</span>
+                    <h3>Live</h3>
+                    <p>Real-time hook analysis</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon pink">◷</div>
+                    <span class="stat-label">PACING ENGINE</span>
+                    <h3>2.5 <small>words/sec</small></h3>
+                    <p>Estimated speaking pace</p>
+                </div>
+            </div>
+
+            <!-- PROJECT CREATION -->
+            <div class="section-heading create-heading">
+                <div>
+                    <span class="eyebrow">GET STARTED</span>
+                    <h2>Create a new project</h2>
+                    <p>Give your next video a strong beginning.</p>
+                </div>
+            </div>
+
+            <section class="workspace-card project-card">
+                <div class="card-heading">
+                    <div class="card-icon">✦</div>
+                    <div>
+                        <h3>New video project</h3>
+                        <p>Set up your creative workspace.</p>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="projectTitle">PROJECT TITLE</label>
+                        <input
+                            type="text"
+                            id="projectTitle"
+                            placeholder="e.g. 5 Python Tricks Every Beginner Should Know"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="projectPlatform">TARGET PLATFORM</label>
+                        <select id="projectPlatform">
+                            <option value="YouTube Shorts">YouTube Shorts</option>
+                            <option value="Instagram Reels">Instagram Reels</option>
+                            <option value="TikTok">TikTok</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="primary-button" onclick="createProject()">
+                    Create Project <span>→</span>
+                </button>
+
+                <p id="projectStatus" class="project-status"></p>
+            </section>
+
+        </section>
+
+        <!-- SCRIPT STUDIO -->
+        <section class="workspace-section" id="draftingSection" style="display:none;">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">CREATION WORKSPACE</span>
+                    <h2>Script Studio</h2>
+                    <p>Build your story one segment at a time.</p>
+                </div>
+                <span class="studio-badge">● EDITOR ACTIVE</span>
+            </div>
+
+            <div class="studio-layout">
+
+                <div class="workspace-card editor-card">
+
+                    <div class="card-heading">
+                        <div class="card-icon">✎</div>
+                        <div>
+                            <h3>Your video script</h3>
+                            <p>Structure your content into three segments.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group hook-group">
+                        <div class="field-heading">
+                            <label for="hookContent">01 / VISUAL HOOK</label>
+                            <span id="hookDuration">0–3 SEC</span>
+                        </div>
+
+                        <input
+                            type="text"
+                            id="hookContent"
+                            placeholder="Start with something that grabs attention..."
+                            oninput="validateHook()"
+                        >
+
+                        <p id="hookWarning" class="hook-warning" style="display:none;">
+                            ⚠ Your hook is too wordy! Keep it under 12 words.
+                        </p>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="field-heading">
+                            <label for="coreContent">02 / CORE VALUE PITCH</label>
+                            <span class="time-tag">MAIN CONTENT</span>
+                        </div>
+
+                        <textarea
+                            id="coreContent"
+                            rows="9"
+                            placeholder="Explain your main idea, share useful information and deliver value to your audience..."
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="field-heading">
+                            <label for="ctaContent">03 / CALL TO ACTION</label>
+                            <span class="time-tag">ENDING / LOOP</span>
+                        </div>
+
+                        <input
+                            type="text"
+                            id="ctaContent"
+                            placeholder="Tell viewers what to do next..."
+                        >
+                    </div>
+
+                    <div id="pacingDisplay" class="pacing-display"></div>
+
+                    <button class="primary-button save-button" onclick="saveFrames()">
+                        Save Storyboard Segments <span>→</span>
+                    </button>
+
+                </div>
+
+                <aside class="workspace-card insights-card">
+                    <span class="eyebrow">CREATOR INSIGHTS</span>
+                    <h3>Make every second count.</h3>
+                    <p>Keep your opening clear, your content valuable and your ending memorable.</p>
+
+                    <div class="insight-item">
+                        <span class="insight-number">01</span>
+                        <div>
+                            <strong>Hook attention</strong>
+                            <p>Make the first three seconds count.</p>
+                        </div>
+                    </div>
+
+                    <div class="insight-item">
+                        <span class="insight-number">02</span>
+                        <div>
+                            <strong>Deliver value</strong>
+                            <p>Keep the message focused and useful.</p>
+                        </div>
+                    </div>
+
+                    <div class="insight-item">
+                        <span class="insight-number">03</span>
+                        <div>
+                            <strong>Close with purpose</strong>
+                            <p>Give your audience a reason to engage.</p>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+
+        <!-- STORYBOARD -->
+        <section class="workspace-section" id="timelineSection" style="display:none;">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">VIDEO STRUCTURE</span>
+                    <h2>Your Storyboard</h2>
+                    <p>Your saved script segments, organized in sequence.</p>
+                </div>
+                <span class="studio-badge">● TIMELINE</span>
+            </div>
+
+            <div class="workspace-card storyboard-card">
+                <div class="storyboard-header">
+                    <div>
+                        <h3>Scene timeline</h3>
+                        <p>Review your video structure.</p>
+                    </div>
+                    <span class="time-tag">CHRONOLOGICAL VIEW</span>
+                </div>
+
+                <div id="timelineContainer" class="timeline-container">
+                    <div class="empty-state">
+                        <div class="empty-icon">▤</div>
+                        <h3>Your storyboard is waiting</h3>
+                        <p>Write your script and save your segments to see them here.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <span>GhostCut © 2026</span>
+            <span>CREATE WITH PURPOSE. CUT THE NOISE.</span>
+        </footer>
+
+    </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
